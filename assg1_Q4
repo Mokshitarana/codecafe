@@ -1,0 +1,56 @@
+//q4.swapping
+
+//SWAPPING #1
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("After swapping: a = %d, b = %d\n",a,b);
+    printf("Hence ,number is:%d %d\n",a,b);
+    return 0;
+}
+//SWAPPING #2
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two integers (non-zero): ");
+    scanf("%d %d", &a, &b);
+    a = a * b;
+    b = a / b;
+    a = a / b;
+    printf("After swapping: a= %d, b= %d\n",a,b);
+
+    return 0;
+}
+//SWAPPING #3
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two integers (non-zero): ");
+    scanf("%d %d", &a, &b);
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+    printf("After swapping: a= %d, b= %d\n",a,b);
+
+    return 0;
+}
+//SWAPPING #4
+#include <stdio.h>
+int main() {
+    int a,b;
+    printf("Enter two integers (non-zero): ");
+    scanf("%d %d", &a, &b);
+    int temp = a;
+    a =b;
+    b =temp;
+    
+    printf("After swapping: a= %d, b= %d\n",a,b);
+
+    return 0;
+}
