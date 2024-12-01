@@ -1,0 +1,47 @@
+//q7.conversion from binary to decimal and vice versa
+#include <stdio.h>
+#include <math.h>
+int binaryToDecimal(int binary) {
+    int decimal = 0, base = 1, remainder;
+
+    while (binary > 0) {
+        remainder = binary % 10;
+        decimal = decimal + remainder * base;
+        binary = binary / 10;
+        base = base * 2;
+    }
+    return decimal;
+}
+int decimalToBinary(int decimal) {
+    int binary = 0, base = 1;
+
+    while (decimal > 0) {
+        int remainder = decimal % 2;
+        binary = binary + remainder * base;
+        decimal = decimal / 2;
+        base = base * 10;
+    }
+    return binary;
+}
+
+int main() {
+    int choice, number;
+    printf("Choose conversion type:\n");
+    printf("1. Binary to Decimal\n");
+    printf("2. Decimal to Binary\n");
+    printf("Enter your choice (1 or 2): ");
+    scanf("%d", &choice);
+    if (choice == 1) {
+        printf("Enter a binary number: ");
+        scanf("%d", &number);
+        printf("Decimal equivalent: %d\n", binaryToDecimal(number));
+    } else if (choice == 2) {
+        printf("Enter a decimal number: ");
+        scanf("%d", &number);
+        printf("Binary equivalent: %d\n", decimalToBinary(number));
+    } else {
+        printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
